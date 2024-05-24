@@ -367,6 +367,9 @@ footer ul {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.section_three_tuto_cards {
+  justify-content: center;
+}
 .section_two_tuto_cards img,
 .section_three_tuto_cards img,
 .section_four_tuto_cards img,
