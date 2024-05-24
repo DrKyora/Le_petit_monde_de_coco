@@ -24,7 +24,7 @@ if (isset($_SESSION["user"]) && ($_SESSION["user"]["role"])) {
                                 <div class="container center">
                                     <div class="popup_admin_layout">
                                         <a href="javascript:void(0)" onclick="togglePopup(<?php echo $id; ?>)">&#10006;</a>
-                                        <textarea><?php echo $donnees['message']; ?></textarea>
+                                        <textarea></textarea>
                                     </div>
                                 </div>
                             </div>
