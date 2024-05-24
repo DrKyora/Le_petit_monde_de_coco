@@ -29,3 +29,16 @@ function togglePopup(id) {
   popup.classList.toggle("open");
 }
 //FIN POPUP PAGE ADMIN
+//MENU BURGER
+const links = document.querySelectorAll("header nav li");
+// ACTIVE/DESACTIVE MENU BURGER
+icons.addEventListener("click", () => {
+  nav.classList.toggle("active_burger");
+});
+//FERME LE MENU BURGER LORSQUE L'ON CLIQUE SUR UN LIEN
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("active_burger");
+  });
+});
+//FIN MENU BURGER

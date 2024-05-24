@@ -15,27 +15,25 @@ session_start();
 <body>
     <div class="shadow">
         <header>
-            <img src="/img/logo_header.png" alt="une main qui tient un crochet" />
-            <div>
-                <nav>
-                    <ul>
-                        <li><a href="accueil.php">Accueil</a></li>
-                        <li><a href="creation.php">Créations</a></li>
-                        <li><a href="tuto.php">Bien débuter</a></li>
-                        <?php if (!isset($_SESSION["user"])) { ?>
-                            <li><a href="inscription.php">Inscription</a></li>
-                            <li><a href="connexion.php">Connexion</a></li>
-                            <?php } else {
-                            if ((isset($_SESSION["user"]) && ($_SESSION["user"]["role"]))) {
-                            ?>
-                                <li><a href="profil.php">Administrateur</a></li>
-                            <?php
-                            } else { ?>
-                                <li><a href="profil.php">Profil</a></li>
-                        <?php }
-                        } ?>
-                    </ul>
-                    <div id="icons"></div>
-                </nav>
-            </div>
+            <nav id="nav">
+                <img src="/img/logo_header.png" alt="une main qui tient un crochet" />
+                <ul>
+                    <li><a href="accueil.php">Accueil</a></li>
+                    <li><a href="creation.php">Créations</a></li>
+                    <li><a href="tuto.php">Bien débuter</a></li>
+                    <?php if (!isset($_SESSION["user"])) { ?>
+                        <li><a href="inscription.php">Inscription</a></li>
+                        <li><a href="connexion.php">Connexion</a></li>
+                        <?php } else {
+                        if ((isset($_SESSION["user"]) && ($_SESSION["user"]["role"]))) {
+                        ?>
+                            <li><a href="profil.php">Administrateur</a></li>
+                        <?php
+                        } else { ?>
+                            <li><a href="profil.php">Profil</a></li>
+                    <?php }
+                    } ?>
+                </ul>
+                <div id="icons"></div>
+            </nav>
         </header>
